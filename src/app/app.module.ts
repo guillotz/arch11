@@ -7,6 +7,7 @@ import { LoginComponent } from './root/pages/login/login.component';
 import { RegisterComponent } from './root/pages/register/register.component';
 import { Error404Component } from './root/pages/error/error404/error404.component';
 import { Error403Component } from './root/pages/error/error403/error403.component';
+import { ContentComponent } from './root/pages/content/content.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Error403Component } from './root/pages/error/error403/error403.componen
     LoginComponent,
     RegisterComponent,
     Error404Component,
-    Error403Component
+    Error403Component,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
