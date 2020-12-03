@@ -14,7 +14,7 @@ export class Interceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         this.loaderService.show()
 
-        //        console.log(`AddHeaderInterceptor - ${req.url}`);
+              console.log(`SOY EL INTERCEPTOR - ${req.url}`);
 
         let jsonReq: HttpRequest<any> = req.clone({
             setHeaders: { 'Content-Type': 'application/json' }

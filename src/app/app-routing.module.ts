@@ -29,7 +29,7 @@ const routes: Routes = [
     children: [ 
       {
         path: '',
-        loadChildren: './modules/productos/productos.module#ProductosModule'
+        loadChildren: () => import('../app/modules/productos/productos.module').then(m => m.ProductosModule)
       }
     ]
   }

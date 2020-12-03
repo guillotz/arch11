@@ -1,13 +1,21 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import {  HTTP_INTERCEPTORS } from '@angular/common/http';
 
-
+import { Interceptor } from './interceptor/interceptor';
+import { throwIfAlreadyLoaded } from './guards/module-import.guard';
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    
+  ],
+  providers: [
+    //Proveer guards acá
+   // { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
   ]
 })
-export class CoreModule { }
+//Necesario para que solo de importe una sola vez
+export class CoreModule {
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    throwIfAlreadyLoaded(parentModule, 'CoreModule');
+  }
+}
