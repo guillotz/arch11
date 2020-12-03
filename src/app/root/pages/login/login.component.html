@@ -1,2 +1,61 @@
-<p>login works!</p>
-<button (click)="testApi()">TEST REQUEST</button>
+<!--
+  This was created based on the Dribble shot by Deepak Yadav that you can find at https://goo.gl/XRALsw
+  I'm @hk95 on GitHub. Feel free to message me anytime.
+-->
+
+<section class="user">
+    <div class="user_options-container">
+      <div class="user_options-text">
+        <div class="user_options-unregistered">
+          <h2 class="user_unregistered-title">No tenes cuenta?</h2>
+          <p class="user_unregistered-text">Crea una y pasa a ser parte del futuro (?) !</p>
+          <button class="user_unregistered-signup" id="signup-button">Crear cuenta</button>
+        </div>
+  
+        <div class="user_options-registered">
+          <h2 class="user_registered-title">Tenes cuenta?</h2>
+          <p class="user_registered-text">Ingresá tus credenciales y disfrutá de la aplicación!</p>
+          <button class="user_registered-login" id="login-button">Login</button>
+        </div>
+      </div>
+      
+      <div class="user_options-forms" id="user_options-forms">
+        <div class="user_forms-login">
+          <h2 class="forms_title">Login</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" placeholder="Mail" class="forms_field-input" required autofocus />
+              </div>
+              <div class="forms_field">
+                <input type="password" placeholder="Contraseña" class="forms_field-input" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="button" class="forms_buttons-forgot">Olvidaste tu contraseña?</button>
+              <button (click)="login()" class="forms_buttons-action">LOG IN</button>
+            </div>
+          </form>
+        </div>
+        <div class="user_forms-signup">
+          <h2 class="forms_title">Crear cuenta</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="text" placeholder="Nombre completo" class="forms_field-input" required />
+              </div>
+              <div class="forms_field">
+                <input type="email" placeholder="Mail" class="forms_field-input" required />
+              </div>
+              <div class="forms_field">
+                <input type="password" placeholder="Contraseña" class="forms_field-input" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <input type="submit" value="Sign up" class="forms_buttons-action">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
