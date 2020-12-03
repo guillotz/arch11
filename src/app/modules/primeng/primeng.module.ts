@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarModule } from 'primeng/sidebar';
 import { FieldsetModule } from 'primeng/fieldset';
+import { MenubarModule } from 'primeng/menubar';
+
 
 
 @NgModule({
@@ -9,11 +11,13 @@ import { FieldsetModule } from 'primeng/fieldset';
   imports: [
     CommonModule,
     SidebarModule,
-    FieldsetModule
+    FieldsetModule,
+    MenubarModule
   ],
   exports: [
     SidebarModule,
-    FieldsetModule
+    FieldsetModule,
+    MenubarModule
   ]
 })
 export class PrimengModule { }

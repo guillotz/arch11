@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Interceptor } from './core/interceptor/interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SidebarComponent } from './root/components/sidebar/sidebar.component';
+import { NavBarComponent } from './root/components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SidebarComponent } from './root/components/sidebar/sidebar.component';
     Error403Component,
     ContentComponent,
     SidebarComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
