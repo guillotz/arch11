@@ -9,10 +9,10 @@ import { Error404Component } from './root/pages/error/error404/error404.componen
 import { Error403Component } from './root/pages/error/error403/error403.component';
 import { ContentComponent } from './root/pages/content/content.component';
 import { SharedModule } from './modules/shared/shared.module';
-import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Interceptor } from './core/interceptor/interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SidebarComponent } from './root/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     Error404Component,
     Error403Component,
     ContentComponent,
-    // CoreModule
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

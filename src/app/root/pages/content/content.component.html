@@ -1,5 +1,24 @@
-<p>content works!</p>
-<p-fieldset legend="Header" [toggleable]="true">
-    Content
-</p-fieldset>
-<router-outlet></router-outlet>
+<button (click)="enableView('side')">SIDEBAR</button>
+<button (click)="enableView('nav')">NAV</button>
+<button (click)="enableView('sidenav')">SIDE Y NAV</button>
+<button (click)="limpiar()">LIMPIAR</button>
+<br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12" *ngIf="nav">
+            NAVBAR
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2" style="background-color: tomato;" *ngIf="side">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-10" style="background-color: teal;">
+            <p-fieldset legend="Header" [toggleable]="true">
+                Content
+            </p-fieldset>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
