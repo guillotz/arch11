@@ -1,0 +1,69 @@
+<ng-template #noData>
+    <span>No se encontraron registros</span>
+</ng-template>
+<div *ngIf="datos?.length > 0; else noData">
+    <p-table #dt [columns]="cols" [value]="cars" [(selection)]="selectedCar" selectionMode="multiple"
+    styleClass="p-datatable-customers" [rowHover]="true" [rows]="10" [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[10,25,50]" [paginator]="true" (onRowSelect)="onRowSelect($event)"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros" [filterDelay]="0">
+
+    <ng-template pTemplate="caption">
+        <div class="row">
+            <div class="col-3">
+                <span>Lista de autos</span>
+            </div>
+            <div class="col-6">
+            </div>
+            <div class="col-3" style="text-align: right;">
+                <span class="p-input-icon-right">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')"
+                        placeholder="Buscar" />
+                </span>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th style="width: 3rem">
+                RAD
+            </th>
+            <th style="width: 3rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                <p-sortIcon [field]="col"></p-sortIcon>
+                {{col.header}}
+            </th>
+            <th style="width: 3rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th style="width: 3rem">
+                RAD
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
+        <tr>
+            <td>
+                <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
+            </td>
+            <td>
+                <p-tableCheckbox [value]="rowData" [index]="rowIndex"></p-tableCheckbox>
+            </td>
+            <td *ngFor="let col of columns">
+                {{ (col.header == 'Precio' ) ? '$ ' + (rowData[col.field] | number:'.2') :  (col.header == 'Lanzamiento' ) ? (rowData[col.field] | date:'dd-MM-yyyy') : rowData[col.field]}}
+            </td>
+            <td>
+                <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+            </td>
+            <td>
+                <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        There are {{cars?.length}} cars
+    </ng-template>
+</p-table>
+</div>

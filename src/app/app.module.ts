@@ -14,6 +14,7 @@ import { Interceptor } from './core/interceptor/interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SidebarComponent } from './root/components/sidebar/sidebar.component';
 import { NavBarComponent } from './root/components/nav-bar/nav-bar.component';
+import { InitialComponent } from './root/pages/initial/initial.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NavBarComponent } from './root/components/nav-bar/nav-bar.component';
     ContentComponent,
     SidebarComponent,
     NavBarComponent,
+    InitialComponent,
   ],
   imports: [
     BrowserModule,
