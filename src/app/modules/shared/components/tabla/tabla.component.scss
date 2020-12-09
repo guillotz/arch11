@@ -1,0 +1,41 @@
+::ng-deep .p-datatable {
+    font-size: 12px;
+    .p-datatable-thead > tr > th {
+        text-align: center;
+    }
+    .p-datatable-tbody > tr > td {
+        text-align: center;
+        padding: 0;
+        border: 1px dotted #e9ecef;
+        border-width: 0 0 1px 0;
+    }
+}
+
+::ng-deep .p-radiobutton .p-radiobutton-box {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+}
+::ng-deep .p-paginator {
+    font-size: 12px;
+    .p-paginator-current {
+        font-size: 12px;
+    }
+    .p-paginator-pages .p-paginator-page {
+        font-size: 12px;
+    }
+    .p-dropdown .p-dropdown-label {
+        font-size: 12px;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+        font-size: 12px;
+    }
+}
+.mensajeFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+::ng-deep .p-button-label {
+    font-size: 12px;
+}

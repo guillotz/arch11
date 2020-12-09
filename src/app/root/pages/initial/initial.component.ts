@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/core/services/app.service';
 
 @Component({
   selector: 'app-initial',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InitialComponent implements OnInit {
 
-  constructor() { }
+  autos? : any[];
+  headers?: any;
+
+  constructor(private appService: AppService) { }
 
   ngOnInit(): void {
+    this.autos = this.appService.getAutos();
+    this.headers = this.appService.getHeadersAutos();
   }
   
 
