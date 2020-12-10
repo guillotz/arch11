@@ -46,7 +46,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns" let-rowIndex="rowIndex">
-        <tr>
+        <tr style="cursor: pointer;">
             <td *ngIf="showRadioInicio">
                 <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
             </td>
@@ -61,6 +61,12 @@
             </td>
             <td *ngIf="showRadioFondo">
                 <p-tableRadioButton [value]="rowData"></p-tableRadioButton>
+            </td>
+            <td *ngIf="showActions" class="columnaAction">
+                <i class="pi pi-check"></i>
+                <i class="pi pi-pencil"></i>
+                <i class="pi pi-share-alt"></i>
+                <i class="pi pi-trash"></i>
             </td>
         </tr>
     </ng-template>

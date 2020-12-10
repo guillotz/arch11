@@ -39,3 +39,8 @@
 ::ng-deep .p-button-label {
     font-size: 12px;
 }
+.columnaAction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

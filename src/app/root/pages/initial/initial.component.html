@@ -1,3 +1,6 @@
-<div class="container">
-    <app-tabla [datos]="autos" [cols]="headers" [modoSeleccion]="single" [showRadioInicio]="true"></app-tabla>
+<div class="container-fluid">
+    <app-tabla [datos]="autos" [cols]="headers" [modoSeleccion]="'single'" [showCheckInicio]="true" [showActions]='true'></app-tabla>
+</div>
+<div class="container-fluid">
+    <app-spinner></app-spinner>
 </div>
