@@ -1,6 +1,8 @@
+<app-spinner></app-spinner>
+<button pButton pRipple type="button" label="Home" class="p-button-raised p-button-text" (click)="go('home')"></button>
+<button pButton pRipple type="button" label="Login" class="p-button-raised p-button-text" (click)="go('error404')"></button>
+<button pButton pRipple type="button" label="Login" class="p-button-raised p-button-text" (click)="go('error403')"></button>
+<button pButton pRipple type="button" label="Spinner" class="p-button-raised p-button-text" (click)="showLoading()"></button>
 <div class="container-fluid">
     <app-tabla [datos]="autos" [cols]="headers" [modoSeleccion]="'single'" [showCheckInicio]="true" [showActions]='true'></app-tabla>
-</div>
-<div class="container-fluid">
-    <app-spinner></app-spinner>
 </div>
