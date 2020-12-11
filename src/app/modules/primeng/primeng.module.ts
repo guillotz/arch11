@@ -5,8 +5,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
-
-
+import { CalendarModule } from 'primeng/calendar';
 
 
 @NgModule({
@@ -17,14 +16,16 @@ import { ButtonModule } from 'primeng/button';
     FieldsetModule,
     MenubarModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    CalendarModule
   ],
   exports: [
     SidebarModule,
     FieldsetModule,
     MenubarModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    CalendarModule
   ]
 })
 export class PrimengModule { }

@@ -1,8 +1,10 @@
-<button (click)="enableView('side')">SIDEBAR</button>
-<button (click)="enableView('nav')">NAV</button>
-<button (click)="enableView('sidenav')">SIDE Y NAV</button>
-<button (click)="limpiar()">LIMPIAR</button>
-<br>
+
+<div class="algo">
+    <button (click)="enableView('side')">SIDEBAR</button>
+    <button (click)="enableView('nav')">NAV</button>
+    <button (click)="enableView('sidenav')">SIDE Y NAV</button>
+    <button (click)="limpiar()">LIMPIAR</button>
+</div>
 
 <div class="container-fluid">
     <div class="row">
@@ -14,10 +16,13 @@
         <div class="col-2" style="background-color: tomato;" *ngIf="side">
             <app-sidebar></app-sidebar>
         </div>
-        <div class="col-10" style="background-color: teal;">
-            <p-fieldset legend="Header" [toggleable]="true">
+        <div class="col-10 mainContent" style="background-color: teal;">
+            <!-- <p-fieldset legend="Header" [toggleable]="true">
                 Content
-            </p-fieldset>
+            </p-fieldset> -->
+            <app-date-picker [value]="fechaParaPasar"></app-date-picker>
+            <app-date-picker [diaMaximo]="fechaMaxima"></app-date-picker>
+            <app-date-picker [diaMaximo]="fechaMaxima" [value]="fechaSaraza" [diaMinimo]="fechaMinima" (fechaSeleccionada)="reciboFecha($event)"></app-date-picker>
             <router-outlet></router-outlet>
         </div>
     </div>

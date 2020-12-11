@@ -1,0 +1,9 @@
+<p-calendar 
+    [(ngModel)]="value" 
+    [locale]="es" 
+    [dateFormat]="'dd/mm/yy'"
+    name="value"
+    [maxDate]="diaMaximo"
+    [minDate]="diaMinimo"
+    (onSelect)="capturoFecha()">
+</p-calendar>
