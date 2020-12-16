@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 .algo {
     display: flex;
+    justify-content: space-evenly;
+    margin:10px 0 10px 0;
+}
+
+.trapi {
+    height: calc(100vh - 48px);
 }
