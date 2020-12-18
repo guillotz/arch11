@@ -1,0 +1,139 @@
+::ng-deep .p-datepicker{
+    font-size: 10pt;
+    padding: .857em;
+    min-width: 16em !important;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #a6a6a6;
+    min-width: 100%;
+    .p-datepicker-header{
+        background-color: #fbfbfb!important;
+        color: #555!important;
+        .p-datepicker-title {
+            margin-right: 0.25em;
+            line-height: 12px;
+            padding: 0;
+            width: 170px;
+            .p-datepicker-month {
+                width: 50%!important;
+                border: 1px solid #d1d5d6;
+                border-left-color: #576a6f;
+                border-top-color: #576a6f;
+                justify-content: unset !important;
+            }
+            select {
+                width: 35% !important;
+                border: 1px solid #d1d5d6;
+                border-left-color: #576a6f;
+                border-top-color: #576a6f;
+            }    
+        }
+    }
+    table {
+        font-size: 8pt;
+        margin: 0!important;
+        border-collapse: unset !important;
+        th{
+            padding: .2em !important;
+            color: #666;
+            font-size: 10pt;
+        }
+        td {
+            padding: 0;
+            border: 1px solid #d3d3d3;
+            span{
+                border-radius: 0!important;
+                padding: .2em!important;
+                background: url('/assets/fondoCalendario.png') 50% 50% repeat-x #e6e6e6;
+                font-weight: 400!important;
+                color: #555;
+                outline: 0!important;
+                text-align: right!important;
+            }
+        }
+        
+    }
+    td{
+        span, .p-monthpicker-month{
+            width: 100% !important;
+            height: 18px !important;
+            justify-content: flex-end !important;
+        }
+    }
+    &:not(.p-datepicker-inline) {
+        background: #fbfbfb;
+        padding: 0.3em;
+    }
+}
+ ::ng-deep .p-calendar-w-btn {
+    .p-inputtext {
+        width: 95px !important;
+        font-size: 9pt !important;
+        border: 1px solid #d1d5d6;
+        border-left-color: #576a6f;
+        border-top-color: #576a6f;
+        border-top-right-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+        background-color: #fff!important;
+        border-right: 1px solid #d1d5d6!important;
+        height: 16px;
+        line-height: 12px;
+        margin: 0 0 0 5px;
+        padding: 5px;
+        border-radius: 5px;
+        &:focus{
+            border: solid 1px #007ad9;
+            box-shadow: none;
+        }
+    }
+    .p-datepicker-trigger {
+        background: transparent !important;
+        height: 10px;
+        border: none;
+        width: 20px;
+    }
+ }
+ ::ng-deep .pi-calendar::before {
+    content: "";
+    background-size: contain;
+    background-position: center;
+    width: 16px;
+    height: 14px;
+    display: block;
+    background: url("/assets/calendario.gif") !important;
+  }
+::ng-deep .p-datepicker-prev-icon.pi-chevron-left::before,
+::ng-deep .p-datepicker-next-icon.pi-chevron-right::before {
+  content: "";
+  background-size: contain;
+  background-position: center;
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+::ng-deep .p-datepicker .p-datepicker-header{
+    .p-datepicker-prev{
+        &:enabled:hover{
+            background: transparent !important;    
+        }
+        &:enabled:focus{
+            box-shadow: none;
+        }
+    }
+    .p-datepicker-next{
+        &:enabled:hover{
+            background: transparent !important;    
+        }
+        &:enabled:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+::ng-deep .p-datepicker-prev-icon.pi-chevron-left::before {
+  background: url("/assets/pag_anterior.png") no-repeat !important;
+}
+::ng-deep .p-datepicker-next-icon.pi-chevron-right::before {
+  background: url("/assets/pag_proximo.png") no-repeat !important;
+}

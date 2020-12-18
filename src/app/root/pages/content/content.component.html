@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="algo">
     <button (click)="enableView('side')">SIDEBAR</button>
     <button (click)="enableView('nav')">NAV</button>
@@ -12,18 +12,40 @@
             <app-nav-bar></app-nav-bar>
         </div>
     </div>
-    <div class="row trapi" style="background-color: teal;">
-        <div class="col-2" style="background-color: tomato;" *ngIf="side">
+    <div class="trapi" style="background-color: teal;">
+        <div  *ngIf="side">
             <app-sidebar></app-sidebar>
         </div>
-        <div class="col-10 mainContent" style="background-color: teal;">
-            <!-- <p-fieldset legend="Header" [toggleable]="true">
-                Content
-            </p-fieldset> -->
+        <div class="mainContent" style="background-color: teal;">
             <app-date-picker [value]="fechaParaPasar"></app-date-picker>
             <app-date-picker [diaMaximo]="fechaMaxima"></app-date-picker>
             <app-date-picker [diaMaximo]="fechaMaxima" [value]="fechaSaraza" [diaMinimo]="fechaMinima" (fechaSeleccionada)="reciboFecha($event)"></app-date-picker>
             <router-outlet></router-outlet>
         </div>
     </div>
+</div> -->
+
+
+<div class="bloque">
+    <div class="row row-espaciado">
+        <div class="col-12 row-titulo" style="text-align: left;">
+            <span class="titulo">
+                Búsqueda de excepciones
+            </span>
+        </div>
+        <div class="col-4 contenidoBloque" style="text-align: center;">
+            Fecha de vigencia mayor a:
+            <app-date-picker></app-date-picker>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-12" style="margin-top: 1%;">
+            <app-tabla [datos]="autos" [mensajePaginado]="'Mostrando {first} a {last}'" [cols]="headers"
+            [modoSeleccion]="'single'" [showCheckInicio]="true" [showActions]='true'></app-tabla>
+        </div>
+    </div>
+    <div class="separador-horizontal"></div>
+        <span class="titulo">
+            Alta de excepciones
+        </span>
+        
 </div>

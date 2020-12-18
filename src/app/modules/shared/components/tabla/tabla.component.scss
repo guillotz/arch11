@@ -1,13 +1,140 @@
 ::ng-deep .p-datatable {
+    *:focus{
+        box-shadow: none !important;
+    }
     font-size: 12px;
+    .p-sortable-column.p-highlight {
+        background: #eeeaea;
+        color: #161616;
+        .p-sortable-column-icon {
+            color: #161616;
+            &:hover{
+                color: #161616 !important;
+            }
+        }
+        &:hover{
+            color: #161616;
+            background: #eeeaea;
+        }
+    }
     .p-datatable-thead > tr > th {
         text-align: center;
+        border-bottom: 1px solid #bebebe !important;
+        color: #576a6f;
+        font-size: 10px;
+        line-height: 25px;
+        padding: 0;
+        white-space: nowrap;
+        text-align: center;
+        border: none;
+        background: url('../../../../../assets/tabla_fondo.png') repeat-x;
+        background-size: cover;
+        outline: none;
     }
     .p-datatable-tbody > tr > td {
         text-align: center;
         padding: 0;
         border: 1px dotted #e9ecef;
         border-width: 0 0 1px 0;
+    }
+    .pi-check:before {
+        color: #000;
+        font-size: 9px;
+        font-weight: 700;
+    }
+    .p-checkbox{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        width: 13px;
+        height: 13px;
+        
+        .p-checkbox-box{
+            width: 15px;
+            height: 13px;
+            text-align: center;
+            font-size: 10px;
+            -webkit-appearance: checkbox !important;
+            background-color: #fff;
+            border-radius: 3px;
+            border: solid 1px #ced4da;
+            .p-checkbox-icon {
+                transition-duration: 0.2s;
+                font-size: 5px;
+            }
+        }
+        .p-checkbox-box.p-highlight {
+            border: solid 1px #ced4da;
+            background: white;
+        }
+        &:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover{
+            border-color: #2196F3;
+            background-color: white;
+        }
+    }
+}
+::ng-deep .p-paginator {
+    .p-paginator-first {
+        background: url('../../../../../assets/pag_primero.png') center no-repeat !important;
+    }
+    .p-paginator-prev {
+        background: url('../../../../../assets/pag_anterior.png') center no-repeat !important;
+    }
+    .p-paginator-next {
+        background: url('../../../../../assets/pag_proximo.png') center no-repeat !important;
+    }
+    .p-paginator-last {
+        background: url('../../../../../assets/pag_ultimo.png') center no-repeat !important;
+    }
+    .p-paginator-element{
+        min-width: 20px;
+        min-height: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 8px;
+        &:disabled{
+            visibility: hidden;
+        }
+       
+    }
+}
+::ng-deep .pi-angle-double-left:before, 
+::ng-deep .pi-angle-double-right:before,
+::ng-deep .pi-angle-right:before,
+::ng-deep .pi-angle-left:before
+{
+  content: none !important;
+}
+::ng-deep body .p-paginator .p-paginator-pages{
+    vertical-align: middle !important;
+  }
+  
+::ng-deep body .p-paginator {
+    font-size: 12px;
+    .p-dropdown .p-dropdown-label {
+        font-size: 12px;
+    }
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+        font-size: 12px;
+    }
+    .p-paginator-pages {
+        .p-paginator-page {
+            color: #333;
+            font-size: 11px;
+            text-align: center;
+            height: 16px;
+            line-height: 16px !important;
+            min-width: 1.3rem;
+            border-right: solid 1px #666;
+            border-radius: 0px;
+            &:last-child{ border:none }
+            }
+        .p-paginator-page.p-highlight {
+            background-color: inherit!important;
+            color: #0097d0!important;
+            font-weight: 700;
+            border-color: #666;
+        }   
     }
 }
 
@@ -16,31 +143,28 @@
     height: 15px;
     margin-top: 3px;
 }
-::ng-deep .p-paginator {
-    font-size: 12px;
-    .p-paginator-current {
-        font-size: 12px;
-    }
-    .p-paginator-pages .p-paginator-page {
-        font-size: 12px;
-    }
-    .p-dropdown .p-dropdown-label {
-        font-size: 12px;
-    }
-    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
-        font-size: 12px;
-    }
-}
+
 .mensajeFooter{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-::ng-deep .p-button-label {
-    font-size: 12px;
-}
+
 .columnaAction{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
+
+::ng-deep .pi-sort-alt:before {
+    content: "\e915";
+}
+
+
+::ng-deep .p-button-label {
+    font-size: 12px;
+}
+
+
+    

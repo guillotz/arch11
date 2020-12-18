@@ -1,9 +1,13 @@
 <p-calendar 
-    [(ngModel)]="value" 
     [locale]="es" 
+    [readonlyInput]="true"
+    [(ngModel)]="value" 
     [dateFormat]="'dd/mm/yy'"
     name="value"
     [maxDate]="diaMaximo"
     [minDate]="diaMinimo"
+    [showIcon]="true" 
+    [monthNavigator]="true"
+    [yearNavigator]="true" yearRange="1980:{{anio}}"
     (onSelect)="capturoFecha()">
 </p-calendar>

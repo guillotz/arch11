@@ -15,8 +15,9 @@ export class TablaComponent implements OnInit {
   @Input() modoSeleccion: string = 'simple';
   @Input() showPaginator: boolean = true;
   @Input() rowsPerPage: number = 5;
-  @Input() showCabecera: boolean = true;
+  @Input() showCabecera: boolean = false;
   @Input() showActions: boolean = false;
+  @Input() mensajePaginado = "Mostrando {first} a {last} de {totalRecords} registros";
   cars?: any[];
   selectedItem?: any;
   constructor() { }

@@ -5,7 +5,7 @@
     <p-table #dt [columns]="cols" [value]="datos" [(selection)]="selectedItem" selectionMode="modoSeleccion"
     styleClass="p-datatable-customers" [rowHover]="true" [rows]="10" [showCurrentPageReport]="true"
     [rowsPerPageOptions]="[10,25,50]" [paginator]="true" (onRowSelect)="onRowSelect($event)"
-    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros" [filterDelay]="0">
+    currentPageReportTemplate="{{mensajePaginado}}" [filterDelay]="0">
 
     <ng-template pTemplate="caption" *ngIf="showCabecera">
         <div class="row">
@@ -76,7 +76,8 @@
                 Hay {{datos?.length}} Registros
             </div>
             <div class="col-8" style="text-align: right;">
-                <button pButton pRipple type="button" label="Seleccionar" class="p-button-raised p-button-text"></button>
+                <!-- <button pButton pRipple type="button" label="Seleccionar" class="p-button-raised p-button-text"></button> -->
+                <button class="botonApp">SELECCIONAR</button>
             </div>
         </div>
         

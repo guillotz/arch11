@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppService } from 'src/app/core/services/app.service';
 
 @Component({
   selector: 'app-content',
@@ -13,12 +15,16 @@ export class ContentComponent implements OnInit {
   fechaMaxima = new Date();
   fechaMinima = new Date();
   fechaParaPasar? : Date;
-  constructor() { }
+  autos? : any[];
+  headers?: any;
+  constructor(private appService: AppService, private router: Router) { }
 
   ngOnInit(): void {
     this.fechaSaraza.setMonth(1);
     this.fechaMaxima.setFullYear(2020,1,25);  
     this.fechaMinima.setFullYear(2020,1,5);
+    this.autos = this.appService.getAutos();
+    this.headers = this.appService.getHeadersAutos();
   }
 
   enableView(tipo: string){
